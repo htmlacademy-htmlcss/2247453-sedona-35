@@ -76,11 +76,11 @@ p {
 
 .navigation {
   display: flex;
-  flex-direction: row
+  flex-direction: row;
 }
 
 .navigation-logo {
-  width: 140;
+  width: 140px;
   padding-left: 70px;
 }
 
@@ -102,11 +102,11 @@ p {
 }
 
 .navigation-link-current {
-  border-bottom:2px solid rgba(117, 98, 87, 1);
+  border-bottom: 2px solid rgba(117, 98, 87, 1);
 }
 
 .button {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -127,15 +127,15 @@ p {
 }
 
 .button-blue {
-  background: #82B3D3;
+  background: #82b3d3;
 }
 
 .button-green {
-  background: #7DB54F;;
+  background: #7db54f;
 }
 
 .button-grey {
-  background: #F2F2F2;
+  background: #f2f2f2;
   color: #333333;
 }
 
@@ -161,7 +161,7 @@ p {
 }
 
 .advantages-main-title {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .advantages-top-text {
@@ -194,8 +194,8 @@ p {
 }
 
 .advantages-photo-text {
-  color: #FFFFFF;
-  background: #82B3D3;
+  color: #ffffff;
+  background: #82b3d3;
 }
 
 .advantages-photo-text h3 {
@@ -228,7 +228,7 @@ p {
 }
 
 .advantages-item-white {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .hotel-search {
@@ -274,12 +274,12 @@ p {
 }
 
 .subscribe-email-field {
-  background: #F2F2F2;
+  background: #f2f2f2;
   border-radius: 4px 0 0 4px;
 }
 
 .subscribe-button {
-  background: #82B3D3;
+  background: #82b3d3;
   border-radius: 0 4px 4px 0;
 }
 
@@ -299,7 +299,7 @@ p {
 }
 
 .footer-social-button {
-  background: #83B3D3;
+  background: #83b3d3;
 }
 
 .footer-telephone-number {
@@ -353,7 +353,7 @@ p {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .catalog-filter-list {
@@ -383,7 +383,6 @@ p {
 }
 
 .sorting {
-
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -405,7 +404,7 @@ p {
 .product-card {
   width: 340px;
   height: 438px;
-  border: 1px solid #E6E6E6;
+  border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
@@ -469,15 +468,15 @@ margin-right: auto;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  background: #82B3D3;
-  color: #FFFFFF;
+  background: #82b3d3;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .pagination-current {
-  background: #F2F2F2;
+  background: #f2f2f2;
   color: #000000;
 }
 
@@ -489,7 +488,7 @@ margin-right: auto;
 .subscribe-white {
   background: none;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   text-align: center;
   border: 0;
 }
