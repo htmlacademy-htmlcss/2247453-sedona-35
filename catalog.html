@@ -117,24 +117,24 @@
       </div>
       <section class="catalog" data-test="catalog">
         <div class="sorting">
-        <h2 class="catalog-result-title">Найдено гостиниц: 38</h2>
+        <p class="catalog-result-title">Найдено гостиниц: 38</p>
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешёвое</option>
             <option value="expensive">Сначала дорогое</option>
             <option value="popular">Сначала популярное</option>
           </select>
         <ul class="select-list">
-          <li>
+          <li class="select-item">
             <a href="#" class="select-button select-button-current">
               <span class="visually-hidden">Показать плиткой</span>
             </a>
           </li>
-          <li>
+          <li class="select-item">
             <a class="select-button" href="#">
               <span class="visually-hidden">Показать карточками</span>
             </a>
           </li>
-          <li>
+          <li class="select-item">
             <a class="select-button" href="#">
               <span class="visually-hidden">Показать списоком</span>
             </a>
@@ -194,8 +194,8 @@
         </ul>
       </div>
       <ul class="pagination">
-        <li class="pagination-item">
-          <a class="pagination-link pagination-current">1</a>
+        <li class="pagination-item pagination-item-current">
+          <a class="pagination-link-current">1</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link" href="#">2</a>
@@ -206,8 +206,8 @@
         <li class="pagination-item">
           <a class="pagination-link" href="#">4</a>
         </li>
-        <li class="pagination-item">
-          <a class="pagination-link pagination-select" href="#">...</a>
+        <li class="pagination-item pagination-select">
+          <a class="pagination-link" href="#">...</a>
           <span class="visually-hidden">Выбор страницы</span>
         </li>
         <li class="pagination-item">
@@ -215,16 +215,18 @@
         </li>
       </ul>
     </section>
-    <section class="subscribe subscribe-white" data-test="subscribe">
-      <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-      <div class="subscribe-text">
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <section class="subscribe subscribe-no-background" data-test="subscribe">
+      <div class="subscribe-content-wrapper">
+        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <div class="subscribe-email-wrapper">
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
+            <input class="subscribe-email-field" placeholder="Ваш e-mail" type="email" id="subscribe-email" name="subscribe-email">
+            <button class="button button-blue subscribe-button" type="submit">Подписаться</button>
+          </form>
+        </div>
       </div>
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
-          <input class="subscribe-email-field" placeholder="Ваш e-mail" type="email" id="subscribe-email" name="subscribe-email">
-          <button class="subscribe-button" type="submit">Подписаться</button>
-        </form>
     </section>
     </main>
     <footer class="page-footer" data-test="footer">
