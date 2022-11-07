@@ -154,6 +154,8 @@ height: 100%;
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
+  padding: 8px;
+  text-decoration: none;
 }
 
 .button a {
@@ -164,14 +166,56 @@ height: 100%;
 .button-brown {
   color: #FFFFFF;
   background: rgba(117, 97, 87, 1);
+  transition: 200ms linear;
+}
+
+.button-brown:hover {
+  background-color: #615048;
+}
+
+.button-brown:focus {
+  background-color: #615048;
 }
 
 .button-blue {
+  color: #FFFFFF;
   background: #82b3d3;
+  transition: 200ms linear;
+}
+
+.button-blue:hover {
+  background-color: #68A2CA;
+}
+
+.button-blue:focus {
+  background-color: #68A2CA;
 }
 
 .button-green {
+  color: #FFFFFF;
   background: #7db54f;
+  transition: 200ms linear;
+}
+
+.button-green:hover {
+  background-color: #6C9E42;
+}
+
+.button-green:focus {
+  background-color: #6C9E42;
+}
+
+.button-brown:active,
+.button-blue:active,
+.button-green:active,
+.button-clean:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-brown:disabled,
+.button-blue:disabled,
+.button-green:disabled {
+  background: #E5E5E5;
 }
 
 .button-grey {
@@ -180,11 +224,30 @@ height: 100%;
   font-weight: 400;
 }
 
+.button-clean {
+  color: #FFFFFF;
+  background: none;
+  transition: 200ms linear;
+}
+
+.button-clean:hover {
+  opacity: 0.6;
+}
+
+.button-clean:focus {
+  border: 3px solid #83B3D3;
+}
+
+.button-clean:disabled {
+  opacity: 0.1;
+}
+
 .navigation-button {
   margin-top: 14px;
   margin-left: 20px;
   width: 160px;
   height: 36px;
+  padding: 0;
 }
 
 .hero {
@@ -430,12 +493,15 @@ content: "";
 
 .subscribe-email-field {
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   width: 452px;
   height: 52px;
   background: #f2f2f2;
   border-radius: 4px 0 0 4px;
   border: none;
+  font-size: 18px;
+  line-height: 24px;
+  opacity: 0.6;
 }
 
 .subscribe-button {
@@ -577,12 +643,33 @@ position: relative;
   flex-wrap: wrap;
 }
 
+.breadcrumbs-link-home {
+  background-image: url(../images/catalog/home.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 12px;
+}
+
 .breadcrumbs-link {
-  font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   color: inherit;
   text-decoration: none;
+  position: relative;
+  margin-right: 28px;
+}
+
+.breadcrumbs-link::after {
+content: url(../images/catalog/path-arrow.svg);
+height: 10px;
+width: 6px;
+position: absolute;
+right: -17px;
+}
+
+.breadcrumbs-item:last-child .breadcrumbs-link::after {
+  content: none;
 }
 
 .catalog-filter-title {
@@ -591,19 +678,35 @@ position: relative;
   line-height: 24px;
   text-transform: capitalize;
   color: #ffffff;
+  padding: 0;
+}
+
+.catalog-filter-group {
+  margin: 0 70px 0 0;
+  padding: 0;
+  border: none;
+}
+
+.catalog-filter-group:last-of-type {
+  margin: 0;
 }
 
 .catalog-filter-list {
-  margin: 0;
+  margin: 32px 0 0 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .filter-group {
-  width: 1060px;
-  margin: 0 auto;
   display: flex;
-  flex-flow: row;
+  justify-content: space-between;
+}
+
+.filter-group-left {
+  display: flex;
 }
 
 .filter-group-infrastructure {
@@ -612,6 +715,32 @@ position: relative;
 
 .filter-group-type {
   width: 160px;
+}
+
+.filter-button {
+  border: none;
+  border-radius: 4px;
+  width: 191px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.filter-group-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-group-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 32px;
 }
 
 .catalog {
@@ -626,7 +755,9 @@ position: relative;
 }
 
 .catalog-result-title {
+  display: block;
   margin: 0 auto 0 0;
+  padding: 6px 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -635,17 +766,76 @@ position: relative;
 }
 
 .select-control {
-  width: 292px;
+  min-width: 292px;
+  font-size: 18px;
+  line-height: 21px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  transition: 200ms linear;
 }
 
+.select-control:hover {
+  border-color: #68A2CA;
+}
+
+.select-control:focus {
+  border-color: #3F5E72
+}
+
+.select-control:disabled {
+  border-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+
 .select-list {
-  margin: 0;
+  margin: 0 0 0 70px;
   padding: 0;
   list-style-type: none;
   min-width: 160px;
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
+}
 
+.select-item {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  display: block;
+  transition: 200ms linear;
+}
+
+.select-item:hover {
+  border-color: #000000;
+}
+
+.select-item:focus {
+  border-color: #68A2CA;
+}
+
+.select-item:active {
+  border-color: #000000;
+}
+
+.select-item-tile {
+  background-image: url(../images/catalog/mapping-tile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.select-item-cards {
+  background-image: url(../images/catalog/mapping-cards.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.select-item-list {
+  background-image: url(../images/catalog/mapping-list.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .select-item {
@@ -691,6 +881,20 @@ position: relative;
   justify-self: end;
 }
 
+.product-card-stars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.product-card-one-star {
+  background-image: url(../images/catalog/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 18px;
+  height: 18px;
+}
+
 .pagination {
   margin: 80px 0 0 0;
   padding: 0;
@@ -702,16 +906,33 @@ position: relative;
 .pagination-item {
   width: 60px;
   height: 60px;
-  background: #82b3d3;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  box-sizing: border-box;
 }
 
 .pagination-item:not(:last-child) {
   margin-right: 8px;
+}
+
+.pagination-item-default {
+  background: #82b3d3;
+}
+
+.pagination-item-default:hover {
+  background: #68A2CA;
+  border: 1px solid #82B3D3;
+}
+
+.pagination-item-default:focus {
+  background: #68A2CA;
+  border: 1px solid #82B3D3;
+}
+
+.pagination-item-default:active .pagination-link {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-item-current {
@@ -722,6 +943,7 @@ position: relative;
 .pagination-select {
   background: none;
   color: #000000;
+  border: 0;
 }
 
 .pagination-select .pagination-link {
