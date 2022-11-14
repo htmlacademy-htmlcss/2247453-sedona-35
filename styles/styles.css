@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: > 2% and last 1 version
+*/
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -42,6 +49,7 @@ body {
 
 .main-container {
   flex-grow: 1;
+  margin-top: -12px;
 }
 
 .visually-hidden {
@@ -58,7 +66,6 @@ body {
 .navigation {
   padding: 0 70px;
   display: flex;
-  height: 64px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -584,6 +591,10 @@ body {
   fill: rgba(104, 162, 202, 0.3);
 }
 
+.footer-telephone {
+  width: 340px;
+}
+
 .footer-telephone-number {
   font-weight: 400;
   font-size: 40px;
@@ -591,7 +602,6 @@ body {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
-  width: 720px;
 }
 
 .footer-telephone-number:hover {
@@ -632,7 +642,7 @@ body {
 }
 
 .catalog-control-block {
-  height: 412px;
+  min-height: 412px;
   color: #ffffff;
   background-color: #000000;
   background-image: url(../images/catalog/catalog-background.jpg);
@@ -941,7 +951,8 @@ body {
   font: inherit;
   background-color: #f2f2f2;
   border: none;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
   flex-grow: 1;
   font-weight: 700;
   font-size: 18px;
@@ -973,7 +984,8 @@ body {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1017,7 +1029,8 @@ body {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   transition: 200ms linear;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background-image: url("../images/catalog/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 18px center;
@@ -1044,10 +1057,11 @@ body {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .select-item {
-  width: 48px;
+  min-width: 48px;
   height: 48px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
@@ -1061,15 +1075,15 @@ body {
 }
 
 .select-item:hover {
-  border-color: #000000;
+  border: 2px solid #000000;
 }
 
-.select-item:focus {
-  border-color: #68a2ca;
+.select-item:focus-within {
+  border: 2px solid #68a2ca;
 }
 
 .select-item:active {
-  border-color: #000000;
+  border: 2px solid #000000;
 }
 
 .select-item-tile {
@@ -1088,10 +1102,6 @@ body {
   background-image: url(../images/catalog/mapping-list.svg);
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.select-item {
-  min-width: 48px;
 }
 
 .products {
@@ -1122,6 +1132,7 @@ body {
   padding: 0;
   grid-column: span 2;
   text-decoration: none;
+  width: fit-content;
 }
 
 .product-card-link-img {
@@ -1198,7 +1209,7 @@ body {
   border: 1px solid #82b3d3;
 }
 
-.pagination-item-default:focus {
+.pagination-item-default:focus-within {
   background: #68a2ca;
   outline: 1px solid #82b3d3;
 }
@@ -1427,7 +1438,8 @@ body {
 
 .input-field::-webkit-outer-spin-button,
 .input-field::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 

@@ -188,11 +188,11 @@
     <div class="modal-container modal-container-closed">
       <div class="modal modal-search modal">
         <section class="modal-content">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="modal-search-field-set">
+          <form class="modal-search-field-set" action="https://echo.htmlacademy.ru/" method="post">
             <label class="input-field-discription" for="day-start">Дата заезда:</label>
             <span class="modal-date-wrapper">
               <input class="input-field input-field-day-start" type="text" id="day-start" name="day-start"
@@ -219,7 +219,7 @@
             <span class="tooltip-wrapper">
               <label class="input-field-discription" for="children">Дети:</label>
               <span class="tooltip">
-                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-modal-kids">
+                <button class="tooltip-toggle" aria-labelledby="tooltip-modal-kids" type="button">
                   <svg class="tooltip-icon" width="2" height="12" viewBox="0 0 2 12" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z" fill="#ffffff" />
                   </svg>
