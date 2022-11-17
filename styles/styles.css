@@ -454,11 +454,6 @@ body {
 }
 
 .hotel-search-button {
-  margin: 54px 0 0 0;
-  padding: 8px 50px;
-}
-
-.hotel-search-button .button-text {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -466,6 +461,8 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 54px 0 0 0;
+  padding: 8px 50px;
 }
 
 .subscribe {
@@ -579,15 +576,21 @@ body {
   fill: #83b3d3;
 }
 
-.footer-social-button:hover {
+.footer-social-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-social-link:hover .footer-social-button {
   fill: #68a2ca;
 }
 
-.footer-social-button:focus {
+.footer-social-link:focus .footer-social-button {
   fill: #68a2ca;
 }
 
-.footer-social-button:active {
+.footer-social-link:active .footer-social-button {
   fill: rgba(104, 162, 202, 0.3);
 }
 
@@ -618,6 +621,7 @@ body {
 
 .footer-academy-site {
   width: 115px;
+  min-height: 60px;
   position: relative;
 }
 
@@ -625,15 +629,21 @@ body {
   fill: rgba(0, 0, 0, 1);
 }
 
-.footer-academy-button:hover {
+.footer-academy-link {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+.footer-academy-link:hover .footer-academy-button {
   fill: #756157;
 }
 
-.footer-academy-button:focus {
+.footer-academy-link:focus .footer-academy-button {
   fill: #756157;
 }
 
-.footer-academy-button:active {
+.footer-academy-link:active .footer-academy-button {
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -874,6 +884,8 @@ body {
   position: absolute;
   height: 4px;
   background-color: rgba(255, 255, 255, 1);
+  left: 10px;
+  width: 208px;
 }
 
 .range-toggle {
@@ -1186,7 +1198,11 @@ body {
   align-items: center;
 }
 
-.pagination-item {
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-link {
   width: 60px;
   height: 60px;
   border-radius: 4px;
@@ -1194,50 +1210,6 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-}
-
-.pagination-item:not(:last-child) {
-  margin-right: 8px;
-}
-
-.pagination-item-default {
-  background: #82b3d3;
-}
-
-.pagination-item-default:hover {
-  background: #68a2ca;
-  border: 1px solid #82b3d3;
-}
-
-.pagination-item-default:focus-within {
-  background: #68a2ca;
-  outline: 1px solid #82b3d3;
-}
-
-.pagination-item-default:active .pagination-link {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.pagination-item-current {
-  background: #f2f2f2;
-  color: #000000;
-}
-
-.pagination-select {
-  background: none;
-  color: #000000;
-  border: 0;
-}
-
-.pagination-select .pagination-link {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  color: #000000;
-  text-decoration: none;
-}
-
-.pagination-link {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -1245,12 +1217,37 @@ body {
   text-decoration: none;
 }
 
+.pagination-link-default {
+  background: #82b3d3;
+}
+
+.pagination-link-default:hover {
+  background: #68a2ca;
+  border: 1px solid #82b3d3;
+}
+
+.pagination-link-default:focus {
+  background: #68a2ca;
+  outline: 1px solid #82b3d3;
+}
+
+.pagination-link-default:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .pagination-link-current {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   color: #000000;
+  background: #f2f2f2;
   text-decoration: none;
+}
+
+.pagination-select {
+  background: none;
+  color: #000000;
+  border: 0;
 }
 
 .subscribe-no-background {
